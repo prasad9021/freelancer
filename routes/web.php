@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/template', [TestController::class,'viewImportFileTemplate']);
+Route::post('/importFile',[TestController::class,'importFile'])->name('importFile');
+Route::get('/createImage',[TestController::class,'createImage'])->name('createImage');
+Route::get('/template1/{name}/{id}/{profile_pic}',[TestController::class,'viewTemplate1'])->name('template1');
+Route::post('/saveImage', [TestController::class, 'saveImage']);
