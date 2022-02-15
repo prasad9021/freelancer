@@ -3,6 +3,7 @@
 
 </head>
 <body>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 <?php
@@ -14,6 +15,13 @@ foreach ($arrStrRows as $arrStrRow){
 ?>
 <iframe id="iframe" src="" width="1" height="1" ></iframe>
 <p>Processing: <span id="perc">0% completed</span> </p>
+Do not refresh page..
+
+<!-- add with javascript -->
+<div class="container">
+    <h2>Progressing</h2>
+    <div class="progress"></div>
+</div>
 
 <script>
     $(document).ready(function(){
